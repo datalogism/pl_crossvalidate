@@ -69,9 +69,11 @@ class KFoldTrainer(Trainer):
         """Overwrite default method until https://github.com/Lightning-AI/lightning/issues/17168 is resolved."""
         if len(self.loggers) > 0 or self.logger.log_dir is not None:
             print("self.logger.log_dir")
+            print(self.logger.log_dir)
             dirpath = self.logger.log_dir
         else:
             print("self.default_root_dir")
+            print(self.default_root_dir)
             dirpath = self.default_root_dir
         print("HEY")
         print(dirpath)
