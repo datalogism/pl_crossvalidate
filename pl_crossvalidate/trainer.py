@@ -71,7 +71,8 @@ class KFoldTrainer(Trainer):
             dirpath = self.logger.log_dir
         else:
             dirpath = self.default_root_dir
-
+        print("HEY")
+        print(dirpath)
         dirpath = self.strategy.broadcast(dirpath)
         return dirpath
 
