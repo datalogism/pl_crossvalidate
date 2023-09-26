@@ -67,7 +67,7 @@ class KFoldTrainer(Trainer):
     @property
     def log_dir(self) -> Optional[str]:
         """Overwrite default method until https://github.com/Lightning-AI/lightning/issues/17168 is resolved."""
-        if len(self.loggers) > 0 or self.logger.log_dir is not None or str(self.logger.log_dir)!="None":
+        if len(self.loggers) > 0 and self.logger.log_dir is not None and str(self.logger.log_dir)!="None":
             print("self.logger.log_dir")
             print(self.logger.log_dir)
             print(self.logger.log_dir)
